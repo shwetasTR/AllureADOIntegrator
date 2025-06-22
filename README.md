@@ -14,7 +14,23 @@ This is a basic Python project scaffolded for automated testing and future integ
    ```powershell
    pip install -r requirements.txt
    ```
-4. To run your code, add your Python scripts to this folder.
+4. **Update the `config.json` file** with your Azure DevOps and Allure/ReportPortal details before running any test cases. Example:
+   ```json
+   {
+     "ado": {
+       "organization": "tr-corp-tax",
+       "project": "onesource-global-trade",
+       "pat": "YOUR_PAT_TOKEN",
+       "test_plan_id": 123,
+       "test_suite_id": 456
+     },
+     "allure": {
+       "results_url": "ENTER_YOUR_ALLURE_RESULTS_JSON_URL_HERE",
+       "update_statuses": ["passed", "failed"]
+     }
+   }
+   ```
+5. To run your code, add your Python scripts to this folder.
 
 ## Next Steps
 

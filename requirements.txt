@@ -1,0 +1,6 @@
+pytest
+allure-pytest
+reportportal-client
+requests
+azure-devops
+pytest

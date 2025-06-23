@@ -14,7 +14,7 @@ This is a basic Python project scaffolded for automated testing and future integ
    ```powershell
    pip install -r requirements.txt
    ```
-4. **Update the `config.json` file** with your Azure DevOps and Allure/ReportPortal details before running any test cases. Example:
+4. **Update the `config.json` file** with your Azure DevOps and Allure details before running any test cases. Example:
 
    ```json
    {

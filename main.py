@@ -55,12 +55,13 @@ def main():
             for r in results:
                 allure_name = r.get('name', '')
                 status = r.get('status', '').lower()
-                if tc_id_str in allure_name and status in allowed_statuses:
+                # Use exact match instead of substring match
+                if allure_name.strip() == tc_id_str and status in allowed_statuses:
                     found = True
                     # Map Allure/ReportPortal status to ADO outcome
-                    if status and status == 'passed':
+                    if status == 'passed':
                         ado_outcome = 'Passed'
-                    elif status and status == 'failed':
+                    elif status == 'failed':
                         ado_outcome = 'Failed'
                     else:
                         ado_outcome = 'NotExecuted'
@@ -68,10 +69,10 @@ def main():
                         run_id, tc_id, test_point_id, test_case_revision, test_case_title, ado_outcome,
                         comment=f"Updated by automation. Allure status: {status}"
                     )
-                    print(f"Matched ADO TestCase {tc_id} with Allure name '{allure_name}' and status '{status}'")
+                    print(f"Matched ADO TestCase {tc_id_str} with Allure name '{allure_name}' and status '{status}'")
                     break
             if not found:
-                print(f"No result found for test case: TestCase-{tc_id} (ID: {tc_id})")
+                print(f"No result found for test case: {tc_id_str} (ID: {tc_id})")
     except Exception as e:
         print(f"[ERROR] Exception occurred: {e}")
 

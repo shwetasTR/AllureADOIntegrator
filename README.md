@@ -1,6 +1,6 @@
 # AllureReportPortalIntegrationWithTestcases
 
-This is a basic Python project scaffolded for automated testing and future integration with Allure and ReportPortal.
+This is a basic Python project scaffolded for automated testing and future integration with Allure reports.
 
 ## Getting Started
 

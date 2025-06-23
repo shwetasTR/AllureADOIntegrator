@@ -7,7 +7,7 @@
     "test_suite_id": 1755960
   },
   "allure": {
-    "results_url": "https://ogt-gtm-angular-test-results-api.8443.aws-int.thomsonreuters.com/allure-docker-service/projects/product-classification/reports/latest/data/behaviors.json",
+    "results_url": "https://ogt-gtm-angular-test-results-api.8443.aws-int.thomsonreuters.com/allure-docker-service/projects/product-classification-api-qa-aws/reports/latest/data/behaviors.json",
     "update_statuses": ["passed"]
   }
 }

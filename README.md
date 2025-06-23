@@ -15,6 +15,7 @@ This is a basic Python project scaffolded for automated testing and future integ
    pip install -r requirements.txt
    ```
 4. **Update the `config.json` file** with your Azure DevOps and Allure/ReportPortal details before running any test cases. Example:
+
    ```json
    {
      "ado": {
@@ -30,7 +31,21 @@ This is a basic Python project scaffolded for automated testing and future integ
      }
    }
    ```
-5. To run your code, add your Python scripts to this folder.
+
+   - **How to get the Allure JSON URL:**
+     - The `results_url` should point to the Allure JSON file (e.g., `behaviors.json`) that contains your test results.
+     - direct HTTP(S) link to the JSON file if hosted remotely.
+     - Example for a remote URL:
+       ```json
+       "results_url": "https://your-server.com/allure-docker-service/projects/your-project/reports/latest/data/behaviors.json"
+       ```
+     - Example for a URL:
+       ```json
+       "results_url": "https://ogt-gtm-angular-test-results-api.8443.aws-int.thomsonreuters.com/allure-docker-service/projects/product-classification-api-qa-aws/reports/latest/data/behaviors.json"
+       ```
+   - Make sure the JSON file is accessible and contains the expected Allure test results structure.
+
+5. To run your code, add your Python scripts to this folder.python main.py
 
 ## Next Steps
 
